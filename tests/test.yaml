@@ -1,4 +1,0 @@
-base:
-  name: test
-  git: github/./.
-  time_update: 1.2.3.
