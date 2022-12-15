@@ -2,7 +2,7 @@ import yaml
 from pathlib import Path
 
 from .model import Base
-from . import config
+from .config import standart
 
 
 def parse_yaml(path: str) -> Base:
@@ -29,7 +29,7 @@ def generate_yaml() -> Path:
         time_update=time_update,
         command_run=commend_run,
     )
-    path = Path(".", f"{name}{config.mask_yaml}")
+    path = Path(".", f"{name}{standart.mask_yaml}")
     with open(path, "w") as f:
         f.write(yaml.safe_dump(base_mod.generate_dict()))
     return path
@@ -43,7 +43,7 @@ def generate_base_yaml(b_path="./") -> Path:
         time_update="110",
         command_run="neofetch",
     )
-    path = Path(b_path, f"neofetch{config.mask_yaml}")
+    path = Path(b_path, f"neofetch{standart.mask_yaml}")
     with open(path, "w") as f:
         f.write(yaml.safe_dump(base_mod.generate_dict()))
     return path

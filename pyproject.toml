@@ -7,6 +7,7 @@ authors = ["vol4ok <vol4oks.d@yandex.ru>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 PyYAML = "^6.0"
+python-dotenv = "^0.21.0"
 
 [tool.poetry.scripts]
 main = "autoupdate.__main__:main"
